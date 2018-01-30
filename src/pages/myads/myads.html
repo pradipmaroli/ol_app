@@ -1,0 +1,101 @@
+<!--
+  Generated template for the MyadsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>My Ads</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div class="searchResultDiv">
+    <div class="row no-gutters" *ngIf="respose">
+    <!-- <div *ngIf="respose"> -->
+      <div class="col-6 col-sm-4" *ngFor="let product of results">
+          <div class="searchItem">
+            <a href="#">
+              <div class="imgBox">
+               <span *ngIf="product.product_image[0]!== undefined && product.product_image[0].image!== undefined"> <img src="{{publicUrl}}/images/thumb_{{product?.product_image[0]?.image}}" class="img-fluid"/></span>
+                <span class="itemPrice">&#8377; {{product?.price}}/-</span>
+              </div>
+              <div class="itemDetailDiv">
+                <h5 class="itemTitle text-center">{{product?.name}}</h5>
+                <p class="ItemAbouDesc">{{product?.description}}</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+
+ <!--      <div class="col-6 col-sm-4">
+        <div class="searchItem">
+          <a href="#">
+            <div class="imgBox">
+              <img src="assets/imgs/car.jpg" class="img-fluid"/>
+              <span class="itemPrice">&#8377; 5,30,500/-</span>
+            </div>
+            <div class="itemDetailDiv">
+              <h5 class="itemTitle text-center">Audi A6</h5>
+              <p class="ItemAbouDesc">Lorem Ipsum is placeholder text commonly used in.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4">
+        <div class="searchItem">
+          <a href="#">
+            <div class="imgBox">
+              <img src="assets/imgs/car.jpg" class="img-fluid"/>
+              <span class="itemPrice">&#8377; 1,30,500/-</span>
+            </div>
+            <div class="itemDetailDiv">
+              <h5 class="itemTitle text-center">Maruthi Ritz</h5>
+              <p class="ItemAbouDesc">Lorem Ipsum is placeholder text commonly used in.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4">
+        <div class="searchItem">
+          <a href="#">
+            <div class="imgBox">
+              <img src="assets/imgs/car.jpg" class="img-fluid"/>
+              <span class="itemPrice">&#8377; 1,30,500/-</span>
+            </div>
+            <div class="itemDetailDiv">
+              <h5 class="itemTitle text-center">Maruthi Ritz</h5>
+              <p class="ItemAbouDesc">Lorem Ipsum is placeholder text commonly used in.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4">
+        <div class="searchItem">
+          <a href="#">
+            <div class="imgBox">
+              <img src="assets/imgs/car.jpg" class="img-fluid"/>
+              <span class="itemPrice">&#8377; 1,30,500/-</span>
+            </div>
+            <div class="itemDetailDiv">
+              <h5 class="itemTitle text-center">Maruthi Ritz</h5>
+              <p class="ItemAbouDesc">Lorem Ipsum is placeholder text commonly used in.</p>
+            </div>
+          </a>
+        </div>
+      </div> -->
+    <div class="row no-gutters">
+      <div class="col-12" *ngIf="norespose">
+          <p>No ads are added!</p>
+          <button class="btn uploadBtn" [navPush]="pushPage" >Add Ad</button>
+      </div> 
+    </div>
+  </div>
+</ion-content>

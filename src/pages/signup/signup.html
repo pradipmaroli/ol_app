@@ -1,0 +1,27 @@
+<!--
+  Generated template for the SignupPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content padding>
+	<div class="pageBg">
+		 <div class="formDiv">
+		 	<h1>Sign Up</h1>
+		 	<!-- <hr> -->
+			 	<form #signup="ngForm" (ngSubmit)="register(signup)" >
+			 		<div class="form-group marg_b">
+			 			<label for="name">Enter your Name</label>
+				 		<input type="text" [ngModel] = "name" name="name" id="name" class="form-control nameFiled">
+				 		<p *ngIf="errname">{{errnamemsg}}</p>
+					</div>
+			 		<div class="form-group marg_b">
+			 			<label for="number">Enter your Mobile Number</label>
+				 		<input type="number" [ngModel] = "mobile" name="mobile" id="number" class="form-control phoneNumberField">
+				 		<p *ngIf="errmob">{{errmobmsg}}</p>
+					</div>
+					<button type="submit" class="btn submit_btn form-control">verify</button>
+			 	</form>
+		 </div>
+	</div>
+</ion-content>

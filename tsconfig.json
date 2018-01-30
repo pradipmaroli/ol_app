@@ -4,6 +4,7 @@
     "declaration": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "allowUnreachableCode": true, 
     "lib": [
       "dom",
       "es2015"

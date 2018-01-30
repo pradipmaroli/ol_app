@@ -1,0 +1,33 @@
+<!--
+  Generated template for the OtpPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!-- <ion-header>
+
+  <ion-navbar>
+    <ion-title>otp</ion-title>
+  </ion-navbar>
+
+</ion-header> -->
+
+
+<ion-content padding>
+	<div class="pageBg">
+		 <div class="formDiv">
+		 	<!-- <h1>Sign Up</h1> -->
+		 	<!-- <hr> -->
+		 	<p class="otpText">Enter OTP Number that sent to {{mobile}} number.</p>
+			 	<form #otpdata="ngForm" (ngSubmit)="otpconfirm(otpdata)" >
+			 		<div class="form-group">
+			 			<!-- <label for="name">Enter your Name</label> -->
+				 		<input type="number" name="otp" id="otp" [ngModel] = "otp" class="form-control otpField" maxlength="4" size="4">
+				 		<input type="hidden" name="mobileno" id="mobileno" [(ngModel)] = "mobileno" class="form-control" >
+					</div>
+					<a href="#" class="resendLink">Re-send OTP</a>
+					<button type="submit" class="btn submit_btn form-control">Submit</button>
+			 	</form>
+		 </div>
+	</div>
+</ion-content>

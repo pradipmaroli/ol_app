@@ -1,0 +1,83 @@
+<!--
+  Generated template for the AdDetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title></ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<div class="itemDetailPage">
+		<div class="itemImageSlideDiv">
+			<!-- <img src="img/carBig.jpg" class="img-fluid"> -->
+			
+			<img src="{{publicUrl}}/images/{{results?.product_image[0]?.image}}" class="img-fluid"/>
+			<!-- <span *ngIf="results.product_image!== undefined && results.product_image[0].image!== undefined"> <img src="{{publicUrl}}/images/{{results?.product_image[0]?.image}}" class="img-fluid"/></span> -->
+		</div>
+		<div class="detailDescription">
+			<div class="div-4 col-left text-center">
+				<img src="assets/imgs/saler.png" class="salerImage img-fluid rounded-circle">
+				<p class="salerName">{{results?.user.name}}</p>
+				<span>Posted at:<br>{{results?.created_at | date: 'dd MMM, yyyy'}}</span>
+			</div>
+			<div class="div-6 col-right">
+				<h6 class="itemName">{{results?.name}}</h6>
+				<h5 class="itemPriceInner">&#8377; {{results?.price}}/-</h5>
+				<p class="detailAboutText">
+					{{results?.description}} 
+				</p>
+			</div>
+		</div>
+		<!-- <div class="featuresDiv">
+			<h5>Features</h5>
+			<ul class="itemFeatureList list-unstyled">
+				<li class="featu_brand">
+					<span>Brand</span><br>
+					Audi
+				</li>
+				<li class="featu_model">
+					<span>Model</span><br>
+					A6
+				</li>
+				<li class="featu_year">
+					<span>Year</span><br>
+					2010
+				</li>
+				<li class="featu_fuel">
+					<span>Fuel</span><br>
+					Petrol
+				</li>
+				<li class="featu_km">
+					<span>KM Driven</span><br>
+					42,000 km
+				</li>
+			</ul>
+		</div> -->
+		<!-- <div class="ItemlocationDiv clearfix">
+			<h5>Location</h5>
+			<div class="locationImg">
+				<a href="#"><img src="img/location.jpg" class="img-fluid rounded-circle"></a>
+			</div>
+			<div class="Itemaddress">
+				<p>Kuluru, Mangalore Dakskina kannada<br>Pin: 575014</p>
+			</div>
+		</div> -->
+	</div>
+	<!-- <div class="innerPageFooter">
+		<div class="row no-gutters">
+			<div class="col-6 text-center footerBtnBox btm_btn_bord_r">
+				<p><i class="fa fa-phone" aria-hidden="true"></i> Call</p>
+			</div>
+			<div class="col-6 text-center footerBtnBox">
+				<p><i class="fa fa-comments-o" aria-hidden="true"></i> Chat</p>
+			</div>
+		</div>
+	</div> -->
+</ion-content>

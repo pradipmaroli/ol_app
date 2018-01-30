@@ -1,17 +1,38 @@
-<ion-header>
+<!-- <ion-header>
   <ion-navbar>
     <ion-title>Home</ion-title>
   </ion-navbar>
-</ion-header>
+</ion-header> -->
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content>
+  <div class="topSearchBar">
+    <button class="categoriesBtn btnBgTrans">All <span><i class="fa fa-angle-down" aria-hidden="true"></i></span></button>
+    <button class="searchBtn float-right btnBgTrans"><i class="fa fa-search" aria-hidden="true"></i></button>
+  </div>
+  <div class="topNavBar">
+    <a href="#" class="locationBtn"><i class="fa fa-map-marker" aria-hidden="true"></i> Kuluru, Mangalore <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+
+    <button class="filterBtn float-right btnBgTrans"><i class="fa fa-sliders" aria-hidden="true"></i></button>
+  </div>
+  <div class="searchResultDiv">
+    <div class="row no-gutters">
+    
+    <div class="col-6 col-sm-4" *ngFor="let product of results">
+        <div class="searchItem">
+          <a href="javascript:void(0);" (click)="detailspageush(product?.id)">
+            <div class="imgBox">
+             <span *ngIf="product.product_image[0]!== undefined && product.product_image[0].image!== undefined"> <img src="{{publicUrl}}/images/thumb_{{product?.product_image[0]?.image}}" class="img-fluid"/></span>
+              <span class="itemPrice">&#8377; {{product?.price}}/-</span>
+            </div>
+            <div class="itemDetailDiv">
+              <h5 class="itemTitle text-center">{{product?.name}}</h5>
+              <p class="ItemAbouDesc">{{product?.description}}</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
 </ion-content>

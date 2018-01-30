@@ -1,0 +1,105 @@
+<!--
+  Generated template for the AddAdvertisePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Add Advertise</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+ <div class="additemWrapper">
+	<div class="uploadBtnDiv" >
+		<button class="btn uploadBtn" [ngClass]="{'errPhotoMsg': isClassErrPhoto }" (click)="getImage()">Take a Picture</button>
+	</div>
+
+	<div class="categoryWrapper" [ngClass]="{'errCatgoryMsg': isClassErrCatgory }">
+		<div class="row no-gutters">
+			<div class="col-6 col-sm-4">
+				<div class="categoryBox">
+					<a href="javascript:void(0);" (click)="ad_cat('1')">
+						<img src="assets/imgs/category/car.png" class="categoryIcon">
+						<p class="categoryName">Car</p>
+					</a>
+				</div>
+			</div>
+			<div class="col-6 col-sm-4">
+				<div class="categoryBox">
+					<a href="javascript:void(0);" (click)="ad_cat('2')">
+						<img src="assets/imgs/category/phone.png" class="categoryIcon">
+						<p class="categoryName">Mobile</p>
+					</a>
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+	<div class="textFieldWrapper">
+			<div class="form-group" [ngClass]="{'errProdMsg': isClassErrProd }">
+			 	<label for="name">Item Name</label>
+				<input type="text" id="productname" name="productname" [(ngModel)]="productname" class="form-control itemFiled" >
+			</div>
+			<div class="form-group" [ngClass]="{'errPriceMsg': isClassErrPrice }">
+			 	<label for="name">Item Price</label>
+				<input type="number" name="price" id="price" [(ngModel)]="price" class="form-control itemFiled" >
+			</div>
+			<div class="form-group">
+			 	<label for="name">Item Discription</label>
+			 	<textarea name="desc" id="desc" [(ngModel)]="desc" class="form-control itemFiled"></textarea>
+				<!-- <input type="text" name="desc" id="desc" class="form-control itemFiled"> -->
+			</div>
+		
+	</div>
+	<div class="postAdBtnWrapper">
+		<a href="#" class="adPostBtn btn" (click)="uploadFile()">Post Your Ad</a>
+	</div>
+</div>	
+<!--   <ion-item [ngClass]="{'errPhotoMsg': isClassErrPhoto }">
+    <button ion-button color="secondary" (click)="getImage()">Take a Photo</button>
+  </ion-item>
+  
+  <div class="searchResultDiv" [ngClass]="{'errCatgoryMsg': isClassErrCatgory }">
+    <div class="row no-gutters catgoryWrap" >
+	  	<div class="col-6 col-sm-4">
+	  		<a href="javascript:void(0);" (click)="ad_cat('1')">
+	            <div class="imgBox">
+	              <ion-icon name="car"></ion-icon>
+	            </div>
+	            <div class="itemDetailDiv">
+	              <h5 class="itemTitle text-center">Car</h5>
+	            </div>
+	         </a>
+	  	</div>
+	  	<div class="col-6 col-sm-4">
+	  		<a href="javascript:void(0);" (click)="ad_cat('2')">
+	            <div class="imgBox">
+	              <ion-icon name="phone-portrait"></ion-icon>
+	            </div>
+	            <div class="itemDetailDiv">
+	              <h5 class="itemTitle text-center">Mobile</h5>
+	            </div>
+	         </a>
+	  	</div>
+  	</div>
+  </div>
+ <ion-item>
+ <input type="text" name="productname" [(ngModel)]="productname" placeholder="product name" [ngClass]="{'errProdMsg': isClassErrProd }">
+ </ion-item>
+
+  <ion-item>
+    <button ion-button (click)="uploadFile()">Add New Ad</button>
+  </ion-item> -->
+
+
+
+</ion-content>
+
+
